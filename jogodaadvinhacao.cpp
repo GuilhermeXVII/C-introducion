@@ -1,24 +1,37 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
+int main(){
+    cout<<"*****************************************"<<endl;
+    cout<<"*****Bem vindo ao jogo da advinhação!****"<<endl;
+    cout<<"*****************************************"<<endl;
 
-int main() {
-    cout << "************************************"<<endl;
-    cout << "* Bem-vindos ao jogo da adivinhacao! *"<<endl;
-    cout << "************************************"<<endl;
-    cout<<"Meu primeiro programa em c++"<<endl;
+    const int NUMERO_SECRETO=42;
+    bool naoAcertou=true;
+    int tentativas=0;
 
-    int numero_secreto=42;
-    cout << "O numero secreto e"<<numero_secreto<<", nao conte para ninguem"<<endl;
 
-    double multiplicao = 7 * 2.43;
-    cout<<multiplicao<<endl;
+    while(naoAcertou){
+        tentativas++;
+        int valorUsuario;
+        cout<<"Entre com um número"<<endl;
+        cout<<"tentativas:"<<tentativas<<endl;
+        cin>>valorUsuario;
 
-    char letra = 66;
-    cout<<letra<<endl;
+        cout<<"O seu número escolhido foi:"<<valorUsuario<<endl;
 
-    int numeroSecreto = 65*8;
-    cout<<"O número multiplicado é:"<<numero_secreto<<endl;
+        bool acertou = NUMERO_SECRETO == valorUsuario;
+        bool maior = valorUsuario > NUMERO_SECRETO;
 
+        if(acertou){
+            cout<<"Acertou, muito bem!"<<endl;
+            naoAcertou=false;
+        }else if(maior){
+            cout<<"O seu chute foi bem maior"<<endl;
+        }
+        else{
+            cout<<"O seu número e bem menor"<<endl;
+        }
+        cout<<"Fim de jogo!"<<endl;
+        cout<<"Você acertou o número secreto em:"<<tentativas<< " tentativas"<<endl;
+    }
 }
-
-
