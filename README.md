@@ -4,3 +4,4 @@
 <h4>Fazemos:</h4>
 <h4>g++ arquivo.cpp -o arquvio.out</h4>
 <h4>./arquivo.out</h4>
+<p>Caso não querer rodar com ./arquivo.cpp possivelmente tem erro de código no arquivo.cpp</p>
